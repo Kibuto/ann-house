@@ -55,9 +55,14 @@
       }
     }
 
+    .logo {
+      text-align: center;
+    }
+
     .content {
       max-width: 1000px;
       margin: 50px auto;
+      text-align: justify;
     }
   }
 }
