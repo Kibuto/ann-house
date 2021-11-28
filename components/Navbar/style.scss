@@ -1,0 +1,34 @@
+.navbar-wrapper {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+
+  ul {
+    list-style-type: none;
+    padding-left: 30px;
+
+    li {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 40px 0px;
+      transform: translateX(-100%);
+      transition: transform 0.4s linear;
+      cursor: pointer;
+      width: fit-content;
+
+      .anticon {
+        margin-right: 10px;
+      }
+
+      + li {
+        margin-left: 20px;
+        transform: translateX(-150%);
+        + li {
+          margin-left: 40px;
+          transform: translateX(-200%);
+        }
+      }
+    }
+  }
+}

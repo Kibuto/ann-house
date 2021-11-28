@@ -1,0 +1,63 @@
+.layouts-wrapper {
+  overflow-y: hidden;
+  &-inner {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+
+    &.show-nav {
+      transform: rotate(-20deg);
+      .circle {
+        transform: rotate(-70deg);
+      }
+      & + .navbar-wrapper li {
+        transform: translateX(0);
+        transition-delay: 0.3s;
+      }
+    }
+
+    .circle-container {
+      position: fixed;
+      top: -100px;
+      left: -100px;
+    }
+
+    .circle {
+      background-color: #ff7979;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      position: relative;
+      transition: transform 0.5s linear;
+
+      .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 26px;
+        cursor: pointer;
+        color: #fff;
+
+        &.btn-open {
+          top: 60%;
+          left: 60%;
+        }
+
+        &.btn-close {
+          top: 60%;
+          left: 40%;
+          transform: rotate(90deg);
+          transform-origin: top left;
+        }
+      }
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+    }
+  }
+}
